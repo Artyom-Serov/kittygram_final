@@ -1,4 +1,4 @@
-# flake8: noqa
+"""Django settings for kittygram project."""
 import os
 from pathlib import Path
 
@@ -13,8 +13,6 @@ SECRET_KEY = env('SECRET_KEY', default='django-insecure')
 DEBUG = env.bool('DEBUG', default=True)
 
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=[])
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -112,7 +110,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated', 
+        'rest_framework.permissions.IsAuthenticated',
     ],
 
     'DEFAULT_AUTHENTICATION_CLASSES': [
